@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Definite Integral Estimator: get estimates of definite integrals in the most Gabriel way possible.</title>
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Definite Integral Estimator<span> estimate definite integrals in the most Gabriel way possible.</span></h1>
+      </header>
+
+      <section>
+        <h2>How It Works</h2>
+        <ol>
+          <li>
+            Enter your integral and generate the graph. Then download the graph onto your computer. Take a look at the photo if you want. It should be
+            a photo of a graph of the integral.
+          </li>
+          <li>Upload the downloaded graph into the estimator section and get your result.</li>
+          <!-- <li>
+            Other stuff: Make sure your equation is legit. Use ^ for exponents, and add a buncha parentheses just in case the parser encounters
+            problems. Generally this method isn't efficient at all since it generates images with a 1:1 aspect ratio. So no scaling the y axis. The
+            better option here would be to scale the y axis and use steganography to encode the aspect ratio in the last couple bytes of the pixels of
+            the image.
+          </li> -->
+          <li>
+            Use any variable name you want but make sure to only have one variable used; this is case sensitive. Use an astericks in place of general
+            multiplication in some cases to be safe. Constants such as PI and E are not supported at this time. Do not change the given name of the
+            file before you upload. Things can get screwed up when a and b are not integers. Make sure a is less than b. Some equations work better
+            than others (in some cases certain equations don't work at all).
+          </li>
+          <li>If you are legitimately using this calculator to solve definite integrals: why? Are you okay. I am concerned.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Generate & Download Graph</h2>
+        <input id="inputa" type="number" placeholder="a" />
+        <input id="inputb" type="number" placeholder="b" />
+        <input id="inputeq" type="text" placeholder="Plain equation without dx (ex: x^2)" style="width: 20rem" />
+        <button class="download-btn">Generate & Download Graph &nbsp;&rarr;</button>
+        <img src="" alt="Graph" style="display: none" id="graph" />
+      </section>
+
+      <section>
+        <h2>Estimate the Value of the Integral</h2>
+        <input type="file" id="file" multiple="false" />
+        <label class="upload" for="file"><span class="title">Upload Your Downloaded Graph</span><span class="file-name"></span></label>
+        <button class="upload-btn">Get Estimated Result &nbsp;&rarr;</button>
+        <div class="success">
+          <p>It worked! Here's the estimate:</p>
+          <h3></h3>
+          <p>
+            Obviously this is just an estimate. It's quite literally the same thing as Riemann sums. Except it makes a file. So it just wastes storage
+            space and energy. But isn't that like 90%+ of the content on the WWW? Something to think about.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p>Built by Gabriel Romualdo. All code MIT licensed. This was pretty interesting to develop.</p>
+      </footer>
+    </main>
+  </body>
+
+  <script src="equations.js"></script>
+  <script src="script.js"></script>
+</html>
